@@ -1,4 +1,4 @@
-import { qs } from './lib/dom.js';
+/*import { qs } from './lib/dom.js';
 import { createCounter } from './modules/counter.js';
 import { save, load } from './services/storage.js';
 
@@ -20,4 +20,4 @@ qs('#inc').addEventListener('click', () => {
 qs('#dec').addEventListener('click', () => {
   qs('#count').textContent = counter.dec();
   save({ count: counter.value() });
-});
+});*/
