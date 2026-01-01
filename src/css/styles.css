@@ -1,0 +1,78 @@
+:root {
+  --bg: #0f172a;
+  /* slate-900 */
+  --fg: #e2e8f0;
+  /* slate-200 */
+  --accent: #22c55e;
+
+  --linkColor:#007bff;
+  /* green-500 */
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+  overflow: hidden;
+}
+
+
+.site-footer {
+  padding: 1rem 2rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+      z-index: 999;
+    background: #0f172a;
+}
+
+
+.app {
+  margin: 5.5rem 0;
+  overflow: auto;
+  height: calc(100vh - 9rem);
+}
+
+a {
+  color: var(--accent);
+}
+
+
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+  color: var(--linkColor)
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 3rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
