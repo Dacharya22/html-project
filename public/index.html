@@ -1,29 +1,66 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Test 1</title>
-    <link rel="icon" href="./favicon.ico" />
-    <link rel="stylesheet" href="../src/css/base/reset.css" />
-    <link rel="stylesheet" href="../src/css/styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <nav class="navbar">
-        
-          <div class="logo"><img class="logo-img" src="../src/imgs/adv.png" /></div>
-          <ul class="nav-links">
-              <li><a href="./index.html">Home</a></li>
-              <li><a href="./about.html">About</a></li>
-          </ul>
-      </nav>
 
-    </header>
-    <main id="app" class="app">
-      <p>Your app is running 🎉</p>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Test 1</title>
+  <link rel="icon" href="./favicon.ico" />
+  <link rel="stylesheet" href="../src/css/base/reset.css" />
+  <link rel="stylesheet" href="../src/css/styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+
+
+    <nav class="navbar">
+
+      <div class="logo"><img class="logo-img" src="../src/imgs/adv.png" /></div>
+      <ul class="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <ul>
+        <li><a href="#">Tables</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">settings</a></li>
+        <li><a href="#">All</a></li>
+
+      </ul>
+
+    </aside>
+    <main>
+       <div class="center">
+        <input type="number" placeholder="Enter the number " id="inp">
+        <button id="btn">Get Tables</button>
+        <div class="out">
+            <ul id="ou-ul" class="ou-ul-c">
+         
+            </ul>
+            <button id="btn-2">Clear</button>
+        </div>
+        </div>
     </main>
-    <footer class="site-footer">© 2026</footer>
-    <script type="module" src="../src/js/main.js"></script>
-  </body>
+
+  <!-- </div>
+  <main class="center">
+    <input type="number" placeholder="Enter the number" id="inp" />
+    <button id="btn">Get Tables</button>
+
+    <div class="out">
+      <ul id="ou-ul"></ul>
+      <button id="btn-2">Clear</button>
+    </div>
+  </main>
+  </div> -->
+
+  <footer class="site-footer">Contact Now</footer>
+  <script type="module" src="../src/js/main.js"></script>
+</body>
+
 </html>

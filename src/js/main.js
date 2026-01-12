@@ -1,23 +1,33 @@
-/*import { qs } from './lib/dom.js';
-import { createCounter } from './modules/counter.js';
-import { save, load } from './services/storage.js';
+let btn = document.getElementById('btn');
+btn.addEventListener('click', table);
 
-const state = load();
-const counter = createCounter(state.count || 0);
+function table() {
+    let inp = document.getElementById('inp');
+    let num = Number(inp.value);
+    inp.value = "";
 
-const app = qs('#app');
-app.innerHTML = `
-  <div class="card">
-    <p>Count: <strong id="count">${counter.value()}</strong></p>
-    <button id="inc">Increase</button>
-    <button id="dec">Decrease</button>
-  </div>`;
+    let ul = document.getElementById("ou-ul");
+    ul.innerHTML = ""; // clear old table
 
-qs('#inc').addEventListener('click', () => {
-  qs('#count').textContent = counter.inc();
-  save({ count: counter.value() });
-});
-qs('#dec').addEventListener('click', () => {
-  qs('#count').textContent = counter.dec();
-  save({ count: counter.value() });
-});*/
+    let tableColor = (num % 2 === 0) ? "green" : "red";
+
+    let i = 1;
+    while (i <= 10) {
+        let tab = num * i;
+
+        let list = document.createElement('li');
+        list.textContent = num + " * " + i + " = " + tab;
+
+        list.style.color = tableColor;
+
+        ul.appendChild(list);
+        i++;
+    }
+}
+
+let btn2 = document.getElementById('btn-2');
+btn2.addEventListener('click', clearTable);
+
+function clearTable() {
+    document.getElementById("ou-ul").innerHTML = "";
+}
