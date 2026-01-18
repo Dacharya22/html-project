@@ -34,33 +34,47 @@
       </ul>
 
     </aside>
-    <main>
+    <main class="main">
        <div class="center">
-        <input type="number" placeholder="Enter the number " id="inp">
-        <button id="btn">Get Tables</button>
+        <div class="group-1">
+          <h1>Generate table</h1>
+          <div>
+          <input type="number" placeholder="Enter the number " id="inp">
+          <button id="genrate-table">Get Tables</button>
+          </div>
+        </div>
+          <button id="btn-2">Clear</button>
+      
         <div class="out">
             <ul id="ou-ul" class="ou-ul-c">
-         
+            <li></li>
             </ul>
-            <button id="btn-2">Clear</button>
         </div>
         </div>
     </main>
 
-  <!-- </div>
-  <main class="center">
-    <input type="number" placeholder="Enter the number" id="inp" />
-    <button id="btn">Get Tables</button>
-
-    <div class="out">
-      <ul id="ou-ul"></ul>
-      <button id="btn-2">Clear</button>
-    </div>
-  </main>
-  </div> -->
-
+<Div style="color: rgb(251, 163, 48);"></Div>
   <footer class="site-footer">Contact Now</footer>
-  <script type="module" src="../src/js/main.js"></script>
+  <!--<script type="module" src="../src/js/main.js"></script>-->
+  <script>
+    let btn = document.getElementById('genrate-table');
+    btn.addEventListener('click', genrateTable);
+    function genrateTable() {
+          let inp = document.getElementById('inp');
+          let num = Number(inp.value);
+          inp.value = "";
+          const total = 10;
+          let ul = document.getElementById("ou-ul");
+          ul.innerHTML = ""; // clear old table
+          let test='';
+          for(let i = 1; i <= total; i++){
+           let tableClass = ((num*i) % 2 === 0) ? "even-table" : "odd-table";
+            test= test + `<li class="${tableClass}">`+ num +"*" + i  +"=" + num*i + "<li>";//`<li>${num} * ${i}  =  ${num}*${i}</li>`;
+            console.log(num +"*" +i  +"=" + num*i);
+          }
+          ul.innerHTML = test;         
+    }
+  </script>
 </body>
 
 </html>
